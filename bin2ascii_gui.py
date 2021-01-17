@@ -1,5 +1,6 @@
 from string import ascii_letters
 from tkinter import *
+import glob
 
 def bin2text(text: str):
     print(text.split(" "))
@@ -32,8 +33,8 @@ if __name__ == "__main__":
         text2.delete("1.0", "end")
         text = text1.get(1.0, END+"-1c").split("\n")
         output = ""
-        print(text)
-        if any([x in ascii_letters for x in text[0]]):
+        print("".join(text))
+        if any([x in ascii_letters + "23456789\',.*()[]\"" for x in "".join(text)]):
             for index, row in enumerate(text):
                 if (index + 1) != len(text):
                     output += text2bin(row.strip()) + "00001010"
