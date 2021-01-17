@@ -3,7 +3,6 @@ from tkinter import *
 import glob
 
 def bin2text(text: str):
-    print(text.split(" "))
     return "".join([chr(int(num, 2)) for num in text.split(" ")])
                     
 def text2bin(text: str):
