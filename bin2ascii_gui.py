@@ -1,6 +1,5 @@
 from string import ascii_letters
 from tkinter import *
-import glob
 
 def bin2text(text: str):
     print(text.split(" "))
