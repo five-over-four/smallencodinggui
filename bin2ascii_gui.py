@@ -24,10 +24,7 @@ if __name__ == "__main__":
     screen = Tk()
     screen.geometry("395x290+600+400")
     screen.title("Binary <-> Text translator")
-
-    def translate():
-        print("ok.")
-
+    
     def getInput():
         text2.delete("1.0", "end")
         text = text1.get(1.0, END+"-1c").split("\n")
