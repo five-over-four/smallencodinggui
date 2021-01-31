@@ -1,4 +1,4 @@
 # Binary <-> ASCII converter (TKinter)
-Little binary <-> ascii widget in TKinter. Write either text or 8-bit binary to translate between them. The formatting of the binary does not matter; you can write "01001000 01100101 01101100 01101100 01101111 00100001" or omit the spaces, or even add them if you like, and it'll work all the same.
+Very simple TKinter binary <-> ascii converter with an additional XOR encryption/decryption tool between ascii <-> base64. The interface is rudimentary at best, but I found myself needing a XOR -> base64 tool, so here we are. I may redesign the interface later and add some more encryption/decryption modes.
 
-![](https://raw.githubusercontent.com/not-legato/bin2ascii/main/extras/sample.png)
+![](https://i.imgur.com/BuRkjhU.png)
