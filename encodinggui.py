@@ -4,10 +4,10 @@ i find occasionally useful. i may come back to improve it
 in order to practice proper tkinter design.
 '''
 
-from tkinter import *
-from string import ascii_letters
 import base64
 import itertools
+from string import ascii_letters
+from tkinter import *
 
 def getinput():
     outputtext.delete("1.0", "end")
@@ -52,19 +52,19 @@ def mash2string(rows: list):
     return output.strip()
 
 def binascii():
-        outputtext.delete("1.0", "end")
-        text = inputtext.get(1.0, END+"-1c").split("\n")
-        output = ""
-        if any([x in ascii_letters + "23456789\',.*()[]\"" for x in "".join(text)]):
-            for index, row in enumerate(text):
-                if (index + 1) != len(text):
-                    output += text2bin(row.strip()) + "00001010" # add ord(\n) = 10 after a line.
-                else:
-                    output += text2bin(row.strip())
-        else:
-            text = mash2string(text)
-            output += bin2text(text)
-        outputtext.insert(END, output)
+    outputtext.delete("1.0", "end")
+    text = inputtext.get(1.0, END+"-1c").split("\n")
+    output = ""
+    if any([x in ascii_letters + "23456789\',.*()[]\"" for x in "".join(text)]):
+        for index, row in enumerate(text):
+            if (index + 1) != len(text):
+                output += text2bin(row.strip()) + "00001010" # add ord(\n) = 10 after a line.
+            else:
+                output += text2bin(row.strip())
+    else:
+        text = mash2string(text)
+        output += bin2text(text)
+    outputtext.insert(END, output)
 
 # lazily non-OOP implementation for now. i'll likely change this later.
 if __name__ == "__main__":
